@@ -62,5 +62,12 @@ public class App
         // *****
         // Let's make it even simpler, let's chain 'em together
         // *****
+
+        Observable.just("Hello from the RxJava chain!")
+            .subscribe(new Action1<String>() {
+                public void call(String s) {
+                    System.out.println(s);
+                }
+            });
     }
 }
