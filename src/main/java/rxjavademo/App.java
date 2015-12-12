@@ -69,5 +69,12 @@ public class App
                     System.out.println(s);
                 }
             });
+
+        // *****
+        // Let's make it even simpler-er, using Java 8 lambdas
+        // *****
+
+        Observable.just("Hello from the lambdafied RxJava!")
+            .subscribe(s -> System.out.println(s));
     }
 }
