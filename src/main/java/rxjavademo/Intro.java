@@ -80,8 +80,16 @@ public class Intro {
         // Let's introduce some operators
         // *****
 
+        // Let's use map to transform the String that's being emitted
         Observable.just("Hello")
                 .map(s -> String.format("%s good man!", s))
                 .subscribe(s -> System.out.println(s));
+
+        // As many maps as you like!
+        Observable.just("Hello")
+                .map(s -> String.format("%s good man", s))
+                .map(s -> String.format("%s!", s))
+                .subscribe(s -> System.out.println(s));
+
     }
 }
